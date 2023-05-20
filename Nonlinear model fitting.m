@@ -1,0 +1,12 @@
+xlsread('data.xls')
+x1=ans(:,2)
+x2=ans(:,3)
+x3=ans(:,4)
+x4=ans(:,5)
+x5=ans(:,6)
+x6=x2.^2
+x7=x2.*x3
+x8=x3.^2
+y=ans(:,7)
+X=[ones(size(x1)),x1,x2,x3,x4,x5,x6,x7,x8]
+[b,bint,r,rint,stats]=regress(y,X)
